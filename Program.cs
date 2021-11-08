@@ -1,25 +1,46 @@
 ﻿using System;
 
 namespace lesson
-  //lesson3 
+//lesson3 
 {
     class Program
     {
-      
-            static void Main(string[] args)
+
+        static void Main(string[] args)
+        {
+            var tel1 = "34651747355237";
+            var tel2 = "45375177525237";
+            var tel3 = "34551776253557";
+            var tel4 = "62545177725237";
+            var tel5 = "80375177825227";
+            var contacts = new string[5, 2] { { "one", tel1 }, { "two", tel2 },
+             { "three", tel3 }, { "four", tel4 }, { "five", tel5 }};
+
+            var y = contacts;
+            for (var u = 0; u < y.GetLength(0); u++)
             {
-            var contacts = new string[5, 2] { { "one", "two" }, { "two", "four" },
-             { "three", "two" }, { "four", "two" }, { "five", "two" },};
-            for (var i = 0; i < contacts.Length; i++)
-            {
-                Console.WriteLine(contacts[i,1]); //выводим массив
+                    for (var d = 0; d <= u - 1; d++) //сдвиг столбцев по диагонали
+                    {
+                        Console.Write("\t");
+                    }
+
+                    for (var j = 0; j < y.GetLength(1); j++)
+                    {
+                        Console.Write($"{y[u, j]}\t");
+                    }
+                    Console.WriteLine();            //выводим массив
+
             }
+          
+            Console.WriteLine("\n\t\t***"); //разделитель упражнений
+                                            //***
+
             var strings = "Hello!";
             var x = strings.ToCharArray(); //стринг в чар
-            int n = x.Length;        // длина массива
-            int k = n / 2;          // середина массива
+            var n = x.Length;        // длина массива
+            var k = n / 2;          // середина массива
             char temp;               // вспомогательный элемент для обмена значениями
-            for (int i = 0; i < k; i++)
+            for (var i = 0; i < k; i++)
             {
                 temp = x[i];
                 x[i] = x[n - i - 1];
@@ -29,9 +50,8 @@ namespace lesson
             {
                 Console.Write($"{i}");
             }
-
-            }
+            Console.WriteLine("\n\t\t***");
         }
-
     }
+}
 
