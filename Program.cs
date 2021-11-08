@@ -13,8 +13,8 @@ namespace lesson
             var tel3 = "34551776253557";
             var tel4 = "62545177725237";
             var tel5 = "80375177825227";
-            var contacts = new string[5, 2] { { "one", tel1 }, { "two", tel2 },
-             { "three", tel3 }, { "four", tel4 }, { "five", tel5 }};
+            var contacts = new string[5, 2] { { "name one", tel1 }, { "name two", tel2 },
+             { "name three", tel3 }, { "name four", tel4 }, { "name five", tel5 }};
 
             var y = contacts;
             for (var u = 0; u < y.GetLength(0); u++)
