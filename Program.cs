@@ -8,6 +8,21 @@ namespace lesson
 
         static void Main(string[] args)
         {
+            int[,] test = new int[5, 2];
+            test[0, 0] = 1;
+            for (int ki = 0; ki < test.GetLength(0); ki++)
+            {
+                for (var d = 0; d <= ki - 1; d++) //сдвиг столбцев по диагонали
+                {
+                    Console.Write("\t");
+                }
+
+                for (var j = 0; j < test.GetLength(1); j++)
+                {
+                    Console.Write($"{test[ki, j]}\t");
+                }
+                Console.WriteLine();
+            }
             var tel1 = "34651747355237";
             var tel2 = "45375177525237";
             var tel3 = "34551776253557";
@@ -19,10 +34,10 @@ namespace lesson
             var y = contacts;
             for (var u = 0; u < y.GetLength(0); u++)
             {
-                    for (var d = 0; d <= u - 1; d++) //сдвиг столбцев по диагонали
-                    {
-                        Console.Write("\t");
-                    }
+                    //for (var d = 0; d <= u - 1; d++) //сдвиг столбцев по диагонали
+                    //{
+                    //    Console.Write("\t");
+                    //}
 
                     for (var j = 0; j < y.GetLength(1); j++)
                     {
