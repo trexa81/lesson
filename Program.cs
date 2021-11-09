@@ -7,19 +7,22 @@ namespace lesson
     {
 
         static void Main(string[] args)
-        {
-            int[,] test = new int[5, 2];
-            test[0, 0] = 1;
-            for (int ki = 0; ki < test.GetLength(0); ki++)
+        {           
+            int[,] arr = new int[10, 2];
+            for (int n1 = 1; n1 <= arr.GetUpperBound(0); n1++)
+            {
+                arr[n1, 0] = n1;
+                arr[n1, 1] = n1 * n1; // добавил таблицу квадратов
+            }
+            for (int ki = 0; ki < arr.GetLength(0); ki++)
             {
                 for (var d = 0; d <= ki - 1; d++) //сдвиг столбцев по диагонали
                 {
                     Console.Write("\t");
                 }
-
-                for (var j = 0; j < test.GetLength(1); j++)
+                for (var j = 0; j < arr.GetLength(1); j++)
                 {
-                    Console.Write($"{test[ki, j]}\t");
+                    Console.Write($"{arr[ki, j]}\t");
                 }
                 Console.WriteLine();
             }
