@@ -12,7 +12,8 @@ namespace lesson
             for (int n1 = 1; n1 <= arr.GetUpperBound(0); n1++)
             {
                 arr[n1, 0] = n1;
-                arr[n1, 1] = n1 * n1; // добавил таблицу квадратов
+                arr[n1, 1] = n1 * n1; 
+                // добавил таблицу квадратов
             }
             for (int ki = 0; ki < arr.GetLength(0); ki++)
             {
